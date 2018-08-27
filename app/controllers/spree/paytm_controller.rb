@@ -25,6 +25,7 @@ module Spree
         @param_list['CUST_ID'] = "CUST-#{cust_id}-ORDER-#{payment_method.txnid(order)}"
         @param_list['MOBILE_NO'] = phone
         @param_list['EMAIL'] = order.email
+        @param_list['CALLBACK_URL'] = 'http://mycomics:3000/paytm/confirm'
 
         checksum = payment_method.new_pg_checksum(@param_list)
         @param_list['CHECKSUMHASH'] = checksum
