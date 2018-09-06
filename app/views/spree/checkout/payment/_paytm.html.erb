@@ -1,3 +1,3 @@
-<%= link_to("Pay With Paytm", paytm_proceed_url(:payment_method_id => payment_method.id), :method => :post, :id => "paytm_button", class: "btn btn-md paytm_button pull-right") %>
+<%= link_to("Pay With Paytm", paytm_proceed_url(:payment_method_id => payment_method.id), :method => :post, :id => "paytm_button", class: "btn btn-md paytm-button pull-right") %>
 
 <% param_prefix = "payment_source[#{payment_method.id}]" %>
